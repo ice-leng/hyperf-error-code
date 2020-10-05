@@ -20,6 +20,13 @@ class ConfigProvider
             'dependencies' => [
 
             ],
+            'annotations'  => [
+                'scan' => [
+                    'paths' => [
+                        __DIR__,
+                    ],
+                ],
+            ],
             'publish'      => [
                 [
                     'id'          => 'error-code',
