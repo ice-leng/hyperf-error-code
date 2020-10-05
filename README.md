@@ -26,7 +26,7 @@ or add
 ```
 to the require section of your `composer.json` file.
 
-如果没有看懂可以参考[hyper-advanced](https://github.com/ice-leng/hyperf-advanced)
+you can see [document](https://github.com/ice-leng/error-code)
 
 Configs
 -----

@@ -2,7 +2,7 @@
   "name": "lengbin/hyperf-error-code",
   "description": "hyperf error code",
   "type": "library",
-  "keywords": ["php", "hyperf", "hyperf-command", ,"extension","error-code", "command"],
+  "keywords": ["php", "hyperf", "hyperf-command", "extension","error-code", "command"],
   "license": "MIT",
   "require": {
     "php": ">=7.2.0",
