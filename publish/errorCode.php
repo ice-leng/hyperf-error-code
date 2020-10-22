@@ -11,4 +11,6 @@ return [
     'classNamespace' => 'App\\Constant',
     // 合并生成 类 文件输出目录
     'output'         => BASE_PATH . '/app/Constant',
+    // 多语言 文件名称
+    'translate'      => 'messages',
 ];

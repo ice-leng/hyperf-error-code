@@ -2,7 +2,11 @@
 
 namespace Lengbin\Hyperf\ErrorCode;
 
+use Hyperf\Contract\TranslatorInterface;
+use Hyperf\Contract\ConfigInterface;
 use Lengbin\ErrorCode\AbstractEnum;
+use Lengbin\Helper\YiiSoft\Arrays\ArrayHelper;
+use Lengbin\Hyperf\Common\Helper\CommonHelper;
 
 class BaseEnum extends AbstractEnum
 {
@@ -16,6 +20,12 @@ class BaseEnum extends AbstractEnum
      */
     public function getMessage(array $replace = [], ?string $locale = null): string
     {
-        return __(parent::getMessage(), $replace, $locale);
+        if (CommonHelper::getContainer()->has(TranslatorInterface::class)) {
+            $message = parent::getMessage();
+            $config = CommonHelper::getContainer()->get(ConfigInterface::class)->get('errorCode', []);
+            $translate = ArrayHelper::get($config, 'translate', 'messages');
+            return __("{$translate}.{$message}", $replace, $locale);
+        }
+        return parent::getMessage($replace);
     }
 }
