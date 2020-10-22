@@ -1,0 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+namespace %NAMESPACE%;
+
+use Lengbin\Hyperf\ErrorCode\BaseEnum;
+
+class %CLASSNAME% extends BaseEnum
+{
+%CONSTANT%
+}

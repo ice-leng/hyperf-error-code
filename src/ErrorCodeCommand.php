@@ -37,7 +37,7 @@ class ErrorCodeCommand extends HyperfCommand
     {
         $config = $this->container->get(ConfigInterface::class)->get('errorCode', []);
         $mergeErrorCode = new Merge($config);
-        $mergeErrorCode->generate();
+        $mergeErrorCode->setStub(__DIR__ . '/stubs/error-code.stub')->generate();
         $this->line('created successfully.', 'info');
     }
 }

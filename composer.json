@@ -7,7 +7,8 @@
   "require": {
     "php": ">=7.2.0",
     "hyperf/command": "~2.0.0",
-    "lengbin/error-code": "dev-main"
+    "lengbin/error-code": "dev-main",
+    "hyperf/translation": "^2.0"
   },
   "minimum-stability": "stable",
   "autoload": {

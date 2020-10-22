@@ -45,6 +45,24 @@ Configs
         'output'         => BASE_PATH . '/app/Constant',
     ];
 
+
+
+class ErrorCode extends BaseEnum
+{
+    /**
+     * @Message("成功")
+     */
+    const SUCCESS = '0';
+}
+
+$error = ErrorCode::byValue(ErrorCode::SUCCESS);
+
+$error->getName();  // SUCCESS
+// 支持多语言
+$error->getMessage([], 'zh-CN'); // 成功
+$error->getValue(); // 0
+
+
 ```
 
 
