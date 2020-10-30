@@ -2,15 +2,16 @@
 
 return [
     // 错误码文件 目录
-    'path'           => [
-        BASE_PATH . '/app/Constant/Errors'
+    'path'             => [
+        BASE_PATH . '/app/Constant/Errors',
     ],
     // 合并生成 类 文件名称
-    'classname'      => 'Error',
+    'classname'        => 'Error',
     // 合并生成 类 命名空间
-    'classNamespace' => 'App\\Constant',
+    'classNamespace'   => 'App\\Constant',
     // 合并生成 类 文件输出目录
-    'output'         => BASE_PATH . '/app/Constant',
+    'output'           => BASE_PATH . '/app/Constant',
     // 多语言 文件名称
-    'translate'      => 'messages',
+    'translate_enable' => false,
+    'translate'        => 'errorCode',
 ];
