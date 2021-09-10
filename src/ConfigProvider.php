@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Lengbin\Hyperf\ErrorCode;
 
-use EasySwoole\Skeleton\Command\ErrorCodeCommand;
+use Lengbin\Hyperf\ErrorCode\Command\ErrorCodeCommand;
 
 class ConfigProvider
 {
