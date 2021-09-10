@@ -12,6 +12,8 @@ declare(strict_types=1);
 
 namespace Lengbin\Hyperf\ErrorCode;
 
+use EasySwoole\Skeleton\Command\ErrorCodeCommand;
+
 class ConfigProvider
 {
     public function __invoke(): array
@@ -26,6 +28,9 @@ class ConfigProvider
                         __DIR__,
                     ],
                 ],
+            ],
+            'commands' => [
+                ErrorCodeCommand::class
             ],
             'publish'      => [
                 [

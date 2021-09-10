@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lengbin\Hyperf\ErrorCode;
+namespace Lengbin\Hyperf\ErrorCode\Command;
 
 use Hyperf\Command\Command as HyperfCommand;
 use Hyperf\Command\Annotation\Command;
