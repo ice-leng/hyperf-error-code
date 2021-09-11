@@ -9,6 +9,7 @@ use Hyperf\Command\Annotation\Command;
 use Hyperf\Contract\ConfigInterface;
 use Lengbin\ErrorCode\Command\Merge;
 use Psr\Container\ContainerInterface;
+use Throwable;
 
 /**
  * @Command
@@ -37,7 +38,12 @@ class ErrorCodeCommand extends HyperfCommand
     {
         $config = $this->container->get(ConfigInterface::class)->get('errorCode', []);
         $mergeErrorCode = new Merge($config);
-        $mergeErrorCode->setStub(__DIR__ . '/stubs/error-code.stub')->generate();
-        $this->line('created successfully.', 'info');
+        $mergeErrorCode->setStub(__DIR__ . '/stubs/error-code.stub');
+        try {
+            $mergeErrorCode->generate();
+            $this->line('created successfully.', 'info');
+        } catch (Throwable $exception) {
+            $this->alert($exception->getMessage());
+        }
     }
 }
