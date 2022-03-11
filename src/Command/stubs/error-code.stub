@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace %NAMESPACE%;
 
 use Lengbin\Hyperf\ErrorCode\BaseEnum;
+use %USE%;
 
 class %CLASSNAME% extends BaseEnum
 {
