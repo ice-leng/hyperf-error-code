@@ -18,7 +18,7 @@ class BaseEnum extends AbstractEnum
      */
     public function getMessage(array $replace = [], ?string $locale = null): string
     {
-        if (ApplicationContext::hasContainer() && ApplicationContext::getContainer(TranslatorInterface::class) && !str_contains(parent::getMessage(), '.')) {
+        if (ApplicationContext::hasContainer() && ApplicationContext::getContainer(TranslatorInterface::class) && str_contains(parent::getMessage(), '.')) {
             return __(parent::getMessage(), $replace, $locale);
         }
         return parent::getMessage($replace);
