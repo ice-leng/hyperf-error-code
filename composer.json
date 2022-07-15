@@ -5,8 +5,8 @@
   "keywords": ["php", "hyperf", "hyperf-command", "extension", "error-code", "command"],
   "license": "MIT",
   "require": {
-    "php": ">=7.2.0",
-    "hyperf/command": "^2.2",
+    "php": ">=8.0",
+    "hyperf/command": "3.0.*",
     "lengbin/error-code": "2.0.x-dev"
   },
   "minimum-stability": "stable",

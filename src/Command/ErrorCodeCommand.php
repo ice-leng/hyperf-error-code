@@ -11,9 +11,7 @@ use Lengbin\ErrorCode\Command\Merge;
 use Psr\Container\ContainerInterface;
 use Throwable;
 
-/**
- * @Command
- */
+#[Command]
 class ErrorCodeCommand extends HyperfCommand
 {
     /**
